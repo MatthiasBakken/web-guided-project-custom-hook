@@ -31,8 +31,7 @@ const initialValues = {
 }
 
 function App() {
-  const [] = usePokeState(initialValues);
-  
+  const [pokemen, selectedPokemon, handlePoke] = usePokeState(initialValues);
   
   return (
     <div className="App">
