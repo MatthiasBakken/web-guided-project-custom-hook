@@ -21,6 +21,8 @@ const usePokeState = (initialValues) => {
         setSelectedPokemon(data);
       });
   };
+
+  return [pokemen, selectedPokemon, handlePoke];
 }
 
 const initialValues = {
