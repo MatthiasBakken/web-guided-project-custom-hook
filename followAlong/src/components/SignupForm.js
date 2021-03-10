@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import TextField from "@material-ui/core/TextField";
 
+import useForm from './../hooks/useForm';
 import Button from "../theme/Button";
 
 const useStyles = makeStyles(theme => ({
@@ -21,28 +22,6 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const useForm = (initialValues) => {
-  //get our initial state definition
-  //pass in our initialValues
-  //define all functions using stateful logic
-  //return all values needed by our component
-
-  const [values, setValues] = useState(initialValues);
-
-  const handleChanges = e => {
-    setValues({
-      ...values,
-      [e.target.name] : e.target.value
-    });
-  };
-
-  const clearForm = e => {
-    e.preventDefault();
-    setValues(initialValues);
-  };
-
-  return [clearForm, handleChanges, values];
-}
 
 const initialState = {
   firstName:"",
@@ -58,8 +37,6 @@ export default function SignupForm() {
     e.preventDefault();
     alert(`${values.firstName} ${values.lastName}` );
   };
-
-  console.log(values);
 
   return (
     <div p={2} className="form">
