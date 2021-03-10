@@ -2,7 +2,10 @@ import React from 'react';
 
 const Pokemon = ({ pokemon, handlePoke })=> {
     return (<div
-        onClick={() => handlePoke(pokemon.id)}
+        onClick={(e) => {
+          console.log(e.target);
+          handlePoke(pokemon.id)
+        }}
         key={pokemon.id}
         className="pokemon"
       >
