@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles.scss";
 
+import usePokeState from './hooks/usePokeState';
 
 import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
