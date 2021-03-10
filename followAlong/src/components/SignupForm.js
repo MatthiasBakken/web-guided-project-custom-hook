@@ -5,6 +5,8 @@ import TextField from "@material-ui/core/TextField";
 import useForm from './../hooks/useForm';
 import Button from "../theme/Button";
 
+import useLocalStorage from './../hooks/useLocalStorage';
+
 const useStyles = makeStyles(theme => ({
   container: {
     display: "flex",
@@ -28,20 +30,8 @@ const initialState = {
   lastName: ""
 }
 
-const useLocalStorage = (key, initialValue) => {
-  //when we create state, check if value is in localStorage.
-  //if it is in localStorage, make the db value our initialstate.
-  //if it is not in localStorage, use initialValue and put that in localStorage
-  //if we modify our state, we sent those same changes to localstorage
-
-  const [ value, setValue ] = useState(initialValue);
-}
-
 export default function SignupForm() {
   const classes = useStyles();
-  const [name, setName ] = useState("");
-
-
   const [clearForm, handleChanges, values] = useForm(initialState);
 
   const handleSubmit = e => {
@@ -51,10 +41,6 @@ export default function SignupForm() {
 
   return (
     <div p={2} className="form">
-      <h1>{name}</h1>
-      <button onClick={()=>{
-        setName("Allison");
-      }}>press</button>
       <form onSubmit={handleSubmit}>
         <fieldset>
           <legend>Add New Client</legend>
