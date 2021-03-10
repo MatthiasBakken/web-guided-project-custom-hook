@@ -19,7 +19,6 @@ function App() {
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon}/>
       <PokeList pokemen={pokemen} handlePoke={handlePoke}/>
-      <PokeList pokemen={pokemen} handlePoke={handlePoke}/>
     </div>
   );
 }
