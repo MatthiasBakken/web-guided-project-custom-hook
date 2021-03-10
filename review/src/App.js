@@ -19,7 +19,7 @@ function App() {
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
   useEffect(() => {
-    setPokemen(getPokemen);
+    setPokemen(getPokemen());
   }, []);
 
   const handlePoke = (id) => {
