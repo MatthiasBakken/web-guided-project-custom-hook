@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react';
 
+import { getPokemon, getPokemen} from './../services/pokeServices';
+
 const usePokeState = (initialValues) => {
     const [pokemen, setPokemen] = useState(initialValues.pokemen);
     const [selectedPokemon, setSelectedPokemon] = useState(initialValues.selectedPokemon);
