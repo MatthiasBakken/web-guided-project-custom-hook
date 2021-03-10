@@ -7,11 +7,7 @@ import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
 
 
-const usePokeState = ()=> {
-  
-}
-
-function App() {
+const usePokeState = () => {
   const [pokemen, setPokemen] = useState([]);
   const [selectedPokemon, setSelectedPokemon] = useState({});
 
@@ -25,6 +21,11 @@ function App() {
         setSelectedPokemon(data);
       });
   };
+}
+
+function App() {
+  const [] = usePokeState();
+  
   
   return (
     <div className="App">
