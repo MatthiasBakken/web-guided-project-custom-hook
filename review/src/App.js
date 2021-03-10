@@ -20,7 +20,7 @@ function App() {
         setSelectedPokemon(data);
       });
   };
-  //asdfa
+  
   return (
     <div className="App">
       <SelectedPoke selectedPokemon={selectedPokemon}/>
