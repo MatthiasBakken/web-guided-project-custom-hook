@@ -7,9 +7,9 @@ import SelectedPoke from './components/SelectedPoke';
 import PokeList from './components/PokeList';
 
 
-const usePokeState = () => {
-  const [pokemen, setPokemen] = useState([]);
-  const [selectedPokemon, setSelectedPokemon] = useState({});
+const usePokeState = (initialValues) => {
+  const [pokemen, setPokemen] = useState(initialValues.pokemen);
+  const [selectedPokemon, setSelectedPokemon] = useState(initialValues.selectedPokemon);
 
   useEffect(() => {
     setPokemen(getPokemen());
@@ -21,6 +21,11 @@ const usePokeState = () => {
         setSelectedPokemon(data);
       });
   };
+}
+
+const initialValues = {
+  pokemen: [],
+  selectedPokemon: {}
 }
 
 function App() {
