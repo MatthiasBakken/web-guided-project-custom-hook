@@ -21,23 +21,45 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SignupForm() {
-  const classes = useStyles();
-  const [firstName, setFirstName] = useState("");
+const useForm = (initialValues) => {
+  //get our initial state definition
+  //pass in our initialValues
+  //define all functions using stateful logic
+  //return all values needed by our component
+
+  const [values, setValues] = useState(initialValues);
 
   const handleChanges = e => {
-    setFirstName(e.target.value);
-  };
-
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(firstName);
+    setValues({
+      ...values,
+      [e.target.name] : e.target.value
+    });
   };
 
   const clearForm = e => {
     e.preventDefault();
-    setFirstName("");
+    setValues(initialValues);
   };
+
+  return [clearForm, handleChanges, values];
+}
+
+const initialState = {
+  firstName:"",
+  lastName: ""
+}
+
+export default function SignupForm() {
+  const classes = useStyles();
+  
+  const [clearForm, handleChanges, values] = useForm(initialState);
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    alert(`${values.firstName} ${values.lastName}` );
+  };
+
+  console.log(values);
 
   return (
     <div p={2} className="form">
@@ -49,11 +71,23 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             name="firstName"
-            value={firstName}
+            value={values.firstName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
           />
+
+          <TextField    
+            id="outlined-name"
+            label="Last Name"
+            className={classes.textField}
+            name="lastName"
+            value={values.lastName}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear
