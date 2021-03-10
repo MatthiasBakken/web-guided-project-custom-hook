@@ -1,3 +1,4 @@
+
 const usePokeState = (initialValues) => {
     const [pokemen, setPokemen] = useState(initialValues.pokemen);
     const [selectedPokemon, setSelectedPokemon] = useState(initialValues.selectedPokemon);
@@ -15,3 +16,5 @@ const usePokeState = (initialValues) => {
   
     return [pokemen, selectedPokemon, handlePoke];
 }
+
+export default usePokeState;
