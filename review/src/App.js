@@ -24,7 +24,7 @@ const usePokeState = () => {
 }
 
 function App() {
-  const [] = usePokeState();
+  const [] = usePokeState(initialValues);
   
   
   return (
