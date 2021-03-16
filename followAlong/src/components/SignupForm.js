@@ -24,10 +24,16 @@ const useStyles = makeStyles(theme => ({
 export default function SignupForm() {
   const classes = useStyles();
   const [firstName, setFirstName] = useState("");
+  const [email, setEmail] = useState('');
+
 
   const handleChanges = e => {
     setFirstName(e.target.value);
   };
+
+  const handleEmailChanges = e => {
+    setEmail(e.target.value);
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -48,9 +54,17 @@ export default function SignupForm() {
             id="outlined-name"
             label="First Name"
             className={classes.textField}
-            name="firstName"
             value={firstName}
             onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-email"
+            label="Email"
+            className={classes.textField}
+            value={email}
+            onChange={handleEmailChanges}
             margin="normal"
             variant="outlined"
           />
@@ -63,7 +77,16 @@ export default function SignupForm() {
             </Button>
           </div>
         </fieldset>
+        <div className="flexer">
+          <Button color="red" onClick={clearForm}>
+            Clear
+            </Button>
+          <Button color="blue" type="submit">
+            Submit
+            </Button>
+        </div>
+        </fieldset>
       </form>
-    </div>
+    </div >
   );
 }
