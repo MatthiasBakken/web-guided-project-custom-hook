@@ -30,7 +30,7 @@ export const useForm = (initialValues, cb) => {
       e.preventDefault();
     }
     // do something!
-    cb();
+    cb(values);
   }
 
   const clearForm = e => {
