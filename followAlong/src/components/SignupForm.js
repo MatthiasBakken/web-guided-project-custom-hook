@@ -25,7 +25,7 @@ export default function SignupForm() {
   const classes = useStyles();
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState('');
-  const [phone, setPhone] = useState('');
+  // const [phone, setPhone] = useState('');
 
 
   const handleChanges = e => {
@@ -35,6 +35,8 @@ export default function SignupForm() {
   const handleEmailChanges = e => {
     setEmail(e.target.value);
   }
+
+  // const handlePhoneChanges = e -> {}
 
   const handleSubmit = e => {
     e.preventDefault();
