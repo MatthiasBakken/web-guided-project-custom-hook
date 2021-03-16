@@ -29,7 +29,7 @@ export default function SignupForm() {
   // const [email, setEmail] = useState('');
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
-  const [firstName, setFirstName, email, setEmail] = useForm();
+  const [firstName, handleFirstNameChange, email, handleEmailChanges, clearForm] = useForm();
 
 
   // const handleChanges = e => {
@@ -63,7 +63,7 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             value={firstName}
-            onChange={handleChanges}
+            onChange={handleFirstNameChanges}
             margin="normal"
             variant="outlined"
           />
