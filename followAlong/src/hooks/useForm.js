@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useLocalStorage, uselocalStorage } from './useLocalStorage';
+import { useLocalStorage } from './useLocalStorage';
 
 export const useForm = (initialValues, cb) => {
   // const [firstName, setFirstName] = useState("");
