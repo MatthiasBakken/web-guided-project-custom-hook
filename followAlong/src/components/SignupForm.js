@@ -31,7 +31,7 @@ export default function SignupForm() {
   // const [phone, setPhone] = useState('');
   const [values, handleChanges, clearForm, handleSubmit] = useForm(
     { firstName: '', email: '' },
-    () => alert(`${firstName} : ${email}`)
+    (values) => alert(`${values.firstName} : ${values.email}`)
   );
   const { firstName, email } = values;
 
