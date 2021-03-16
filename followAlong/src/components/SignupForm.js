@@ -63,18 +63,20 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             value={firstName}
-            onChange={handleFirstNameChanges}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
+            name="firstName"
           />
           <TextField
             id="outlined-email"
             label="Email"
             className={classes.textField}
             value={email}
-            onChange={handleEmailChanges}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
+            name="email"
           />
         </fieldset>
         <div className="flexer">
