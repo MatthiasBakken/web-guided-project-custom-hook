@@ -23,8 +23,8 @@ const useStyles = makeStyles(theme => ({
 
 export default function SignupForm() {
   const classes = useStyles();
-  const [firstName, setFirstName] = useState("");
-  const [email, setEmail] = useState('');
+  // const [firstName, setFirstName] = useState("");
+  // const [email, setEmail] = useState('');
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
 
