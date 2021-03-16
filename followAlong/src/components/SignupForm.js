@@ -77,14 +77,6 @@ export default function SignupForm() {
             </Button>
           </div>
         </fieldset>
-        <div className="flexer">
-          <Button color="red" onClick={clearForm}>
-            Clear
-            </Button>
-          <Button color="blue" type="submit">
-            Submit
-            </Button>
-        </div>
       </form>
     </div >
   );
