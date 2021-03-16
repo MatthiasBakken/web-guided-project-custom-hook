@@ -31,5 +31,5 @@ export const useForm = (initialValues) => {
     setEmail("");
   };
 
-  return [firstName, email, handleChanges, clearForm];
+  return [values, handleChanges, clearForm];
 }
