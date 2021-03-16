@@ -5,7 +5,7 @@ export const useLocalStorage = (initialValue) => {
 
   const setValue = value => {
     setStoredValue(value);
-    window.localStorage.setItem('loval-storage-item', JSON.stringify(value));
+    window.localStorage.setItem('local-storage-item', JSON.stringify(value));
   }
 
   return [value, setValue];
