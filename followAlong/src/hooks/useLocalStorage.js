@@ -1,7 +1,9 @@
 import { useState } from 'react';
 
 export const useLocalStorage = (key, initialValue) => {
-  const [value, setStoredValue] = useState(initialValue);
+  const [value, setStoredValue] = useState(() => {
+    return initialValue;
+  });
 
   const setValue = value => {
     setStoredValue(value);
