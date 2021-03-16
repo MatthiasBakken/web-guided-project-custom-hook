@@ -18,5 +18,5 @@ export const useForm = () => {
     setEmail("");
   };
 
-  return [firstName, setFirstName, email, setEmail];
+  return [firstName, handleChanges, email, handleEmailChanges, clearForm];
 }
