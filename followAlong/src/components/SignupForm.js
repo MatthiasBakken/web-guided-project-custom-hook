@@ -32,13 +32,13 @@ export default function SignupForm() {
   const [firstName, setFirstName, email, setEmail] = useForm();
 
 
-  const handleChanges = e => {
-    setFirstName(e.target.value);
-  };
+  // const handleChanges = e => {
+  //   setFirstName(e.target.value);
+  // };
 
-  const handleEmailChanges = e => {
-    setEmail(e.target.value);
-  }
+  // const handleEmailChanges = e => {
+  //   setEmail(e.target.value);
+  // }
 
   // const handlePhoneChanges = e -> {}
 
@@ -47,11 +47,11 @@ export default function SignupForm() {
     alert(`${firstName} : ${email}`);
   };
 
-  const clearForm = e => {
-    e.preventDefault();
-    setFirstName("");
-    setEmail("");
-  };
+  // const clearForm = e => {
+  //   e.preventDefault();
+  //   setFirstName("");
+  //   setEmail("");
+  // };
 
   return (
     <div p={2} className="form">
