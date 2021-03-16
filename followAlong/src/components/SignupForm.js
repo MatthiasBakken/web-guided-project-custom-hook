@@ -29,7 +29,7 @@ export default function SignupForm() {
   // const [email, setEmail] = useState('');
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
-  const [firstName, handleFirstNameChange, email, handleEmailChanges, clearForm] = useForm();
+  const [firstName, handleFirstNameChanges, email, handleEmailChanges, clearForm] = useForm();
 
 
   // const handleChanges = e => {
