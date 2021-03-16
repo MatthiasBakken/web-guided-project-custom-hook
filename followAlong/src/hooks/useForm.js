@@ -13,7 +13,11 @@ export const useForm = () => {
   // }
 
   const handleChanges = e => {
-
+    if (e.target.name === 'firstName') {
+      setFirstName(e.target.value);
+    } else if (e.target.name === 'email') {
+      setEmail(e.target.value);
+    }
   }
 
   const clearForm = e => {
