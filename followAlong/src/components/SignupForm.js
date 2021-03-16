@@ -29,7 +29,7 @@ export default function SignupForm() {
   // const [email, setEmail] = useState('');
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
-  const [values, handleChanges, clearForm] = useForm({ firstName: '', email: '' });
+  const [values, handleChanges, clearForm, handleSubmit] = useForm({ firstName: '', email: '' });
   const { firstName, email } = values;
 
 
@@ -43,10 +43,10 @@ export default function SignupForm() {
 
   // const handlePhoneChanges = e -> {}
 
-  const handleSubmit = e => {
-    e.preventDefault();
-    alert(`${firstName} : ${email}`);
-  };
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   alert(`${firstName} : ${email}`);
+  // };
 
   // const clearForm = e => {
   //   e.preventDefault();
