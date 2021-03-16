@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-export const useForm = (initialValues) => {
+export const useForm = (initialValues, cb) => {
   // const [firstName, setFirstName] = useState("");
   // const [email, setEmail] = useState('');
   const [values, setValues] = useState(initialValues);
@@ -30,6 +30,7 @@ export const useForm = (initialValues) => {
       e.preventDefault();
     }
     // do something!
+    cb();
   }
 
   const clearForm = e => {
