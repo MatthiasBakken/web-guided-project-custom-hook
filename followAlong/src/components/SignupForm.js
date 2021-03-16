@@ -30,10 +30,10 @@ export default function SignupForm() {
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
   const [values, handleChanges, clearForm, handleSubmit] = useForm(
-    { firstName: '', email: '' },
+    { firstName: '', email: '', phone: '' },
     (values) => alert(`${values.firstName} : ${values.email}`)
   );
-  const { firstName, email } = values;
+  const { firstName, email, phone } = values;
 
 
   // const handleChanges = e => {
@@ -81,6 +81,16 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
             name="email"
+          />
+          <TextField
+            id="outlined-phone"
+            label="Phone"
+            className={classes.textField}
+            value={phone}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+            name="phone"
           />
         </fieldset>
         <div className="flexer">
