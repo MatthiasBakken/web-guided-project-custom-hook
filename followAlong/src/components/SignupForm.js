@@ -25,6 +25,7 @@ export default function SignupForm() {
   const classes = useStyles();
   const [firstName, setFirstName] = useState("");
   const [email, setEmail] = useState('');
+  const [phone, setPhone] = useState('');
 
 
   const handleChanges = e => {
