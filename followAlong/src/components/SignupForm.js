@@ -59,7 +59,7 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
-          <TextField
+          {/* <TextField
             id="outlined-email"
             label="Email"
             className={classes.textField}
@@ -67,7 +67,7 @@ export default function SignupForm() {
             onChange={handleEmailChanges}
             margin="normal"
             variant="outlined"
-          />
+          /> */}
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear
