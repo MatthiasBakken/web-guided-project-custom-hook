@@ -3,7 +3,7 @@ import { useState } from 'react';
 export const useForm = () => {
   // const [firstName, setFirstName] = useState("");
   // const [email, setEmail] = useState('');
-  const [value, setValues] = useState({ firstName: '', email: '' });
+  const [values, setValues] = useState({ firstName: '', email: '' });
 
   // const handleChanges = e => {
   //   setFirstName(e.target.value);
@@ -14,11 +14,15 @@ export const useForm = () => {
   // }
 
   const handleChanges = e => {
-    if (e.target.name === 'firstName') {
-      setFirstName(e.target.value);
-    } else if (e.target.name === 'email') {
-      setEmail(e.target.value);
-    }
+    // if (e.target.name === 'firstName') {
+    //   setFirstName(e.target.value);
+    // } else if (e.target.name === 'email') {
+    //   setEmail(e.target.value);
+    // }
+    setValues({
+      ...values,
+      [e.target.name]: e.target.value
+    })
   }
 
   const clearForm = e => {
