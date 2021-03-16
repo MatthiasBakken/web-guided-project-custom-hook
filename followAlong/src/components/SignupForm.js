@@ -30,6 +30,7 @@ export default function SignupForm() {
   // const [] = useForm(); ??
   // const [phone, setPhone] = useState('');
   const [values, handleChanges, clearForm] = useForm({ firstName: '', email: '' });
+  const { firstName, email } = values;
 
 
   // const handleChanges = e => {
