@@ -4,7 +4,7 @@ import { useLocalStorage } from './useLocalStorage';
 export const useForm = (initialValues, cb) => {
   // const [firstName, setFirstName] = useState("");
   // const [email, setEmail] = useState('');
-  const [values, setValues] = useLocalStorage(initialValues);
+  const [values, setValues] = useLocalStorage('form-values', initialValues);
 
   // const handleChanges = e => {
   //   setFirstName(e.target.value);
