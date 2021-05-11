@@ -28,13 +28,13 @@ export default function SignupForm() {
   // const [lastName, setLastName] = useState("");
   const [state, setState] = useForm();
 
-  const handleChanges = e => {
-    setState({ ...state, firstName: e.target.value });
-  };
+  // const handleChanges = e => {
+  //   setState({ ...state, firstName: e.target.value });
+  // };
 
-  const handleLastNameChanges = e => {
-    setState({ ...state, lastName: e.target.value });
-  }
+  // const handleLastNameChanges = e => {
+  //   setState({ ...state, lastName: e.target.value });
+  // }
 
   const handleSubmit = e => {
     e.preventDefault();
