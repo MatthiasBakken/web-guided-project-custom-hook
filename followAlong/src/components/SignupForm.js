@@ -29,11 +29,11 @@ export default function SignupForm() {
   const [state, setState] = useForm();
 
   const handleChanges = e => {
-    setState({ firstName: e.target.value });
+    setState({ ...state, firstName: e.target.value });
   };
 
   const handleLastNameChanges = e => {
-    setState({ lastName: e.target.value });
+    setState({ ...state, lastName: e.target.value });
   }
 
   const handleSubmit = e => {
