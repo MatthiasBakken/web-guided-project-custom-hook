@@ -1,8 +1,8 @@
 import { useState } from 'react';
 
 export const useForm = () => {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [varOne, setVarOne] = useState("");
+  const [varTwo, setVarTwo] = useState("");
 
-  return [firstName, setFirstName, lastName, setLastName];
+  return [varOne, setVarOne, varTwo, setVarTwo];
 }
