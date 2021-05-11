@@ -36,12 +36,13 @@ export default function SignupForm() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    alert(firstName);
+    alert(firstName + ' ' + lastName);
   };
 
   const clearForm = e => {
     e.preventDefault();
     setFirstName("");
+    setLastName("");
   };
 
   return (
