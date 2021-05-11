@@ -43,7 +43,7 @@ export default function SignupForm() {
 
   const clearForm = e => {
     e.preventDefault();
-    setState({ firstName: '', lastName: '' })
+    setState({ ...state, firstName: '', lastName: '' })
   };
 
   return (
