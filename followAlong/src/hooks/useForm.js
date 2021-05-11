@@ -5,7 +5,7 @@ export const useForm = () => {
 
   const handleChanges = e => {
     setState({
-      ...state,
+      // ...state,
       [e.target.name]: e.target.value
     })
   }
