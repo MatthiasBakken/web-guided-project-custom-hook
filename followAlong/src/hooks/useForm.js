@@ -10,5 +10,9 @@ export const useForm = () => {
     })
   }
 
+  const clearForm = () => {
+    this.setState({})
+  }
+
   return [state, setState, handleChanges];
 }
