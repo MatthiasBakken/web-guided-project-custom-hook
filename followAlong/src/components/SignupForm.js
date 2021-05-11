@@ -26,7 +26,7 @@ export default function SignupForm() {
   const classes = useStyles();
   // const [firstName, setFirstName] = useState("");
   // const [lastName, setLastName] = useState("");
-  const [state, clearForm, handleChanges] = useForm();
+  const [state, clearForm, handleChanges] = useForm({ firstName: '', lastName: '' });
 
   // const handleChanges = e => {
   //   setState({ ...state, firstName: e.target.value });
