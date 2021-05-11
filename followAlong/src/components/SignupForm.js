@@ -31,8 +31,7 @@ export default function SignupForm() {
   },
     () => {
       alert(state.firstName + ' ' + state.lastName + " " + state.email)
-    },
-    initialValue
+    }
   );
 
   // const handleChanges = e => {
