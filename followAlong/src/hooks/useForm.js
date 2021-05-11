@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
-export const useForm = () => {
-  const [state, setState] = useState({});
+export const useForm = (initialValues) => {
+  const [state, setState] = useState(initialValues);
 
   const handleChanges = e => {
     setState({
@@ -12,7 +12,7 @@ export const useForm = () => {
 
   const clearForm = e => {
     e.preventDefault();
-    setState({});
+    setState(initialValues);
   }
 
   return [state, clearForm, handleChanges];
