@@ -11,8 +11,8 @@ export const useForm = () => {
   }
 
   const clearForm = () => {
-    this.setState({})
+    this.setState({});
   }
 
-  return [state, setState, handleChanges];
+  return [state, clearForm, handleChanges];
 }
