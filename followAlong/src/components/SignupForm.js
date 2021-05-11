@@ -30,7 +30,7 @@ export default function SignupForm() {
     firstName: '', lastName: '', email: ''
   },
     () => {
-      alert(state.firstName + ' ' + state.lastName)
+      alert(state.firstName + ' ' + state.lastName + " " + state.email)
     }
   );
 
