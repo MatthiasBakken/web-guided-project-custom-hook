@@ -77,6 +77,16 @@ export default function SignupForm() {
             margin="normal"
             variant="outlined"
           />
+          <TextField
+            id="outlined-email"
+            label="Email"
+            className={classes.textField}
+            name="email"
+            value={state.email}
+            onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
           <div className="flexer">
             <Button color="red" onClick={clearForm}>
               Clear
