@@ -19,6 +19,6 @@ const fetchAllPoke = () => {
 };
 
 export default {
-  fetchSelectedPoke,
-  fetchAllPoke
+  fetchSelectedPoke, // fetchSelectedPoke: fetchSelectedPoke
+  fetchAllPoke // fetchAllPoke
 };
