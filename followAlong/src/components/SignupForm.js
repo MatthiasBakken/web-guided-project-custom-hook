@@ -56,7 +56,7 @@ export default function SignupForm() {
             label="First Name"
             className={classes.textField}
             name="firstName"
-            value={firstName}
+            value={state.firstName}
             onChange={handleChanges}
             margin="normal"
             variant="outlined"
@@ -66,7 +66,7 @@ export default function SignupForm() {
             label="Last Name"
             className={classes.textField}
             name="lastName"
-            value={lastName}
+            value={state.lastName}
             onChange={handleLastNameChanges}
             margin="normal"
             variant="outlined"
