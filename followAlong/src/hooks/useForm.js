@@ -3,5 +3,5 @@ import { useState } from 'react';
 export const useForm = () => {
   const [state, setState] = useState({});
 
-  return [state, setState];
+  return [state, setState, handleChanges];
 }
