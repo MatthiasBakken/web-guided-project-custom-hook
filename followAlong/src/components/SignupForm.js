@@ -26,7 +26,7 @@ export default function SignupForm() {
   const classes = useStyles();
   // const [firstName, setFirstName] = useState("");
   // const [lastName, setLastName] = useState("");
-  const [state, setState, handleChanges] = useForm();
+  const [state, clearForm, handleChanges] = useForm();
 
   // const handleChanges = e => {
   //   setState({ ...state, firstName: e.target.value });
@@ -41,10 +41,10 @@ export default function SignupForm() {
     alert(state.firstName + ' ' + state.lastName);
   };
 
-  const clearForm = e => {
-    e.preventDefault();
-    setState({ ...state, firstName: '', lastName: '' })
-  };
+  // const clearForm = e => {
+  //   e.preventDefault();
+  //   setState({ ...state, firstName: '', lastName: '' })
+  // };
 
   return (
     <div p={2} className="form">
