@@ -26,7 +26,7 @@ export default function SignupForm() {
   const classes = useStyles();
   // const [firstName, setFirstName] = useState("");
   // const [lastName, setLastName] = useState("");
-  const [state, setState] = useForm();
+  const [state, setState, handleChanges] = useForm();
 
   // const handleChanges = e => {
   //   setState({ ...state, firstName: e.target.value });
@@ -67,7 +67,7 @@ export default function SignupForm() {
             className={classes.textField}
             name="lastName"
             value={state.lastName}
-            onChange={handleLastNameChanges}
+            onChange={handleChanges}
             margin="normal"
             variant="outlined"
           />
