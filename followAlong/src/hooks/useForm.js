@@ -12,7 +12,7 @@ export const useForm = () => {
 
   const clearForm = e => {
     e.preventDefault();
-    this.setState({});
+    setState({});
   }
 
   return [state, clearForm, handleChanges];
