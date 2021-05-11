@@ -12,7 +12,7 @@ export const useForm = (initialValues) => {
 
   const clearForm = e => {
     e.preventDefault();
-    // setState(initialValues);
+    setState(initialValues);
   }
 
   return [state, clearForm, handleChanges];
