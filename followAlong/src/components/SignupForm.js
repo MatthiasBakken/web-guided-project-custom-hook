@@ -24,10 +24,15 @@ const useStyles = makeStyles(theme => ({
 export default function SignupForm() {
   const classes = useStyles();
   const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
 
   const handleChanges = e => {
     setFirstName(e.target.value);
   };
+
+  const handleLastNameChanges = e => {
+    setLastName(e.target.value);
+  }
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -51,6 +56,16 @@ export default function SignupForm() {
             name="firstName"
             value={firstName}
             onChange={handleChanges}
+            margin="normal"
+            variant="outlined"
+          />
+          <TextField
+            id="outlined-lastname"
+            label="Last Name"
+            className={classes.textField}
+            name="lastName"
+            value={lastName}
+            onChange={handleLastNameChanges}
             margin="normal"
             variant="outlined"
           />
